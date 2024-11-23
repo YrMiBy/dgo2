@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Красивое меню</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style-type: none; /* Убираем маркеры */
+            padding: 0;
+            margin: 0;
+            display: flex; /* Выравниваем элементы в строку */
+            background-color: #333; /* Цвет фона меню */
+        }
+
+        li {
+            flex: 1; /* Занимаем равное пространство */
+        }
+
+        a {
+            display: block; /* Делаем ссылку блочным элементом */
+            padding: 15px; /* Отступы вокруг текста */
+            text-align: center; /* Центрируем текст */
+            text-decoration: none; /* Убираем подчеркивание */
+            color: white; /* Цвет текста */
+            transition: background-color 0.3s; /* Плавный переход цвета фона */
+        }
+
+        a:hover {
+            background-color: #575757; /* Цвет фона при наведении */
+        }
+    </style>
+</head>
+<body>
+
+<ul>
+    <ul>
+        <li><a href="{% url 'index' %}">Главная</a></li>
+        <li><a href="{% url 'ciolk' %}">Циолковский</a></li>
+        <li><a href="{% url 'perelman' %}">Перельман</a></li>
+        <li><a href="{% url 'kapica' %}">Капица</a></li>
+    </ul>
+</ul>
+
+</body>
+</html>
